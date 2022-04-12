@@ -27,7 +27,7 @@ class material:
     def EgCahge(self,T):
         EgT = []
         for i in range(0,len(T)):
-            cur_val1 = (self.alpha*T[1]*T[i])
+            cur_val1 = (self.alpha*T[i]*T[i])
             cur_val2 = (T[i]+self.beta)
             cur_val = cur_val1/cur_val2
             cur_val = self.Eg - cur_val
