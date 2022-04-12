@@ -32,7 +32,13 @@ Ge = material("Germanium",Eg=0.67,alpha=None,beta=None,Nc=1.04*pow(10,19),Nv=6.0
 
 
 target_ni = Ge.ni(300)
-for i in range(0,10000):
+print(f"{Ge.name} ni in {300}K is: {target_ni} [1/cm^3]")
+i=0
+print("Calculating...")
+while i<10000:
     if Si.ni(i+1) >= target_ni:
-        print(f"Temperature is: {i+1}K")
+        print(f"Temperature needed is: {i+1}K")
+        print(f"The {Si.name} intrinsic consentration will be: {Si.ni(i+1)} [1/cm^3]")
         break
+
+    i += 0.0001
