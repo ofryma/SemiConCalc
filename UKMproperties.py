@@ -1,6 +1,11 @@
-
-import math
-import matplotlib.pyplot as plt
+import subprocess
+import sys
+try:
+    import math
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 'math'])
+finally:
+    import math
 
 
 # electron mass and effective electron and holes mass
@@ -12,10 +17,6 @@ h = 4.135667 * pow(10,-15)
 e = 1.60217*pow(10,-19)
 # holes mobility in room temperature
 mobility = 1100
-
-
-
-
 
 
 def calcMobility(mobility_in_rt,T,Eg):

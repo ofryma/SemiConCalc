@@ -6,7 +6,15 @@
 # predefined materials and press enter. If you choose to add a new material, another menu will
 # appear that will guide you throw what values you need to enter
 
-import matplotlib.pyplot as plt
+import subprocess
+import sys
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", 'matplotlib'])
+finally:
+    import matplotlib.pyplot as plt
+
 
 
 # creating a global temprature vector from 0 to 1000
@@ -82,6 +90,9 @@ while True:
             Materials.append(new_one)
             Materials[c].EgCahge(T_range)
 
+        elif c == len(Materials) + 1:
+            print("Goodbye...")
+            break
         else:
             Materials[c].EgCahge(T_range)
 
@@ -89,8 +100,6 @@ while True:
         print("*** Input error! please try again")
         pass
 
-    if c == len(Materials)+1:
-        print("Goodbye...")
-        break
+
 
 
