@@ -2,6 +2,7 @@
 
 import subprocess
 import sys
+import os
 try:
     import math
 except ImportError:
@@ -36,6 +37,8 @@ Si = material("Silicon",Eg=1.17,alpha=0.000473,beta=636,Nc=2.8*pow(10,19),Nv=1.0
 Ge = material("Germanium",Eg=0.67,alpha=None,beta=None,Nc=1.04*pow(10,19),Nv=6.0*pow(10,18))
 
 Temp = 300
+
+os.system('cls')
 target_ni = Ge.ni(Temp)
 print(f"{Ge.name} ni in {Temp}K is: {target_ni} [1/cm^3]")
 i=0

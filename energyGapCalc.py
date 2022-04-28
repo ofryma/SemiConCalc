@@ -1,17 +1,8 @@
-
 # Ex 1
-
-
-# This script calculates the Energy gap for a given material as a function of the
-# temperature and plotting the graph for it.
-# when running this script, a menu will appear with some predefined material and an option
-# for creating a new material and adding it to the menu.
-# For plotting a graph all you need to do is run the script, enter one of the values for the
-# predefined materials and press enter. If you choose to add a new material, another menu will
-# appear that will guide you throw what values you need to enter
 
 import subprocess
 import sys
+import os
 try:
     import matplotlib.pyplot as plt
 except ImportError:
@@ -19,14 +10,11 @@ except ImportError:
 finally:
     import matplotlib.pyplot as plt
 
-
-
 # creating a global temprature vector from 0 to 1000
 T_range = []
 Materials = []
 for i in range(0,1001):
     T_range.append(i)
-
 
 # creaing a class for every material given and its properties
 class material:
@@ -53,9 +41,7 @@ class material:
         plt.grid()
         plt.show()
 
-
         return EgT
-
 
 # define Silicon and Gallium Arsenide properties and adding them to the list
 Si = material("Silicon",Eg=1.17,alpha=0.000473,beta=636)
@@ -63,12 +49,10 @@ GaAs = material("Gallium Arsenide",Eg=1.519,alpha=0.0005405,beta=204)
 Materials.append(Si)
 Materials.append(GaAs)
 
-
-
-
-
 print("This Program will calculate the energy gap for a given material")
 while True:
+
+    os.system('cls')
     print("Choose From the options below:")
     print()
 

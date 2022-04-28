@@ -2,6 +2,7 @@
 
 import subprocess
 import sys
+import os
 try:
     import math
 except ImportError:
@@ -90,6 +91,7 @@ Nv = calcDOS(mh_eff, T_val, 'Nv')
 e_mobility = calcElectronMobility(holes_mobility,Eg,calcDOS(me_eff,300,'Nc'),calcDOS(mh_eff,300,'Nv'),T_val)
 e_D = calcD(T_val,e_mobility)
 
+os.system('cls')
 
 print()
 print(f"Material Properties for a temprature of {T_val} Kelvin")
@@ -99,3 +101,5 @@ print(f"Nv = {Nv} [1/cm^3] ")
 print(f"Electron's mobility = {e_mobility} [cm^2 / V sec]: ")
 print(f"Electron's diffusion coefficient = {e_D} [cm^2 / sec] ")
 print()
+
+python filename.py
