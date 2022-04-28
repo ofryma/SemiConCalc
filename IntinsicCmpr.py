@@ -1,3 +1,5 @@
+# Ex 2
+
 import subprocess
 import sys
 try:
@@ -44,4 +46,4 @@ while i<10000:
         print(f"The {Si.name} intrinsic consentration will be: {Si.ni(i+1)} [1/cm^3]")
         break
 
-    i += 0.00001
+    i += 0.0001

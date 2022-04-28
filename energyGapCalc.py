@@ -1,3 +1,7 @@
+
+# Ex 1
+
+
 # This script calculates the Energy gap for a given material as a function of the
 # temperature and plotting the graph for it.
 # when running this script, a menu will appear with some predefined material and an option
