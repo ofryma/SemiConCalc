@@ -102,4 +102,4 @@ print(f"Electron's mobility = {e_mobility} [cm^2 / V sec]: ")
 print(f"Electron's diffusion coefficient = {e_D} [cm^2 / sec] ")
 print()
 
-python filename.py
+
